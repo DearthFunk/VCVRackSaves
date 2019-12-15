@@ -1,0 +1,247 @@
+{
+  "version": "1.1.5",
+  "modules": [
+    {
+      "id": 1,
+      "plugin": "Core",
+      "version": "1.1.5",
+      "model": "AudioInterface",
+      "params": [],
+      "data": {
+        "audio": {
+          "driver": 6,
+          "deviceName": "Speaker/HP (Realtek High Definition Audio)",
+          "offset": 0,
+          "maxChannels": 8,
+          "sampleRate": 44100,
+          "blockSize": 256
+        }
+      },
+      "pos": [
+        80,
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "plugin": "Fundamental",
+      "version": "1.4.0",
+      "model": "VCMixer",
+      "params": [
+        {
+          "id": 0,
+          "value": 0.588999033
+        },
+        {
+          "id": 1,
+          "value": 1.0
+        },
+        {
+          "id": 2,
+          "value": 1.0
+        },
+        {
+          "id": 3,
+          "value": 1.0
+        },
+        {
+          "id": 4,
+          "value": 1.0
+        }
+      ],
+      "leftModuleId": 41,
+      "pos": [
+        64,
+        0
+      ]
+    },
+    {
+      "id": 26,
+      "plugin": "Core",
+      "version": "1.1.5",
+      "model": "MIDIToCVInterface",
+      "params": [],
+      "data": {
+        "channels": 4,
+        "polyMode": 0,
+        "clockDivision": 24,
+        "lastPitch": 8192,
+        "lastMod": 0,
+        "midi": {
+          "driver": 4,
+          "deviceName": "Arturia KeyStep 32 0",
+          "channel": -1
+        }
+      },
+      "pos": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": 34,
+      "plugin": "Fundamental",
+      "version": "1.4.0",
+      "model": "ADSR",
+      "params": [
+        {
+          "id": 0,
+          "value": 0.229999945
+        },
+        {
+          "id": 1,
+          "value": 0.556999922
+        },
+        {
+          "id": 2,
+          "value": 0.684500039
+        },
+        {
+          "id": 3,
+          "value": 0.370999932
+        }
+      ],
+      "leftModuleId": 38,
+      "pos": [
+        40,
+        0
+      ]
+    },
+    {
+      "id": 38,
+      "plugin": "Fundamental",
+      "version": "1.4.0",
+      "model": "VCO",
+      "params": [
+        {
+          "id": 0,
+          "value": 0.0
+        },
+        {
+          "id": 1,
+          "value": 1.0
+        },
+        {
+          "id": 2,
+          "value": 20.25
+        },
+        {
+          "id": 3,
+          "value": 0.0
+        },
+        {
+          "id": 4,
+          "value": 0.0
+        },
+        {
+          "id": 5,
+          "value": 0.5
+        },
+        {
+          "id": 6,
+          "value": 0.0
+        }
+      ],
+      "rightModuleId": 34,
+      "pos": [
+        30,
+        0
+      ]
+    },
+    {
+      "id": 41,
+      "plugin": "Fundamental",
+      "version": "1.4.0",
+      "model": "VCA",
+      "params": [
+        {
+          "id": 0,
+          "value": 1.0
+        },
+        {
+          "id": 1,
+          "value": 1.0
+        }
+      ],
+      "rightModuleId": 2,
+      "pos": [
+        59,
+        0
+      ]
+    }
+  ],
+  "cables": [
+    {
+      "id": 142,
+      "outputModuleId": 26,
+      "outputId": 1,
+      "inputModuleId": 34,
+      "inputId": 4,
+      "color": "#c91847"
+    },
+    {
+      "id": 144,
+      "outputModuleId": 26,
+      "outputId": 0,
+      "inputModuleId": 38,
+      "inputId": 0,
+      "color": "#c9b70e"
+    },
+    {
+      "id": 145,
+      "outputModuleId": 41,
+      "outputId": 1,
+      "inputModuleId": 2,
+      "inputId": 1,
+      "color": "#0c8e15"
+    },
+    {
+      "id": 191,
+      "outputModuleId": 26,
+      "outputId": 2,
+      "inputModuleId": 41,
+      "inputId": 0,
+      "color": "#0c8e15"
+    },
+    {
+      "id": 192,
+      "outputModuleId": 41,
+      "outputId": 0,
+      "inputModuleId": 41,
+      "inputId": 3,
+      "color": "#c91847"
+    },
+    {
+      "id": 193,
+      "outputModuleId": 2,
+      "outputId": 0,
+      "inputModuleId": 1,
+      "inputId": 0,
+      "color": "#0986ad"
+    },
+    {
+      "id": 194,
+      "outputModuleId": 2,
+      "outputId": 0,
+      "inputModuleId": 1,
+      "inputId": 1,
+      "color": "#c9b70e"
+    },
+    {
+      "id": 198,
+      "outputModuleId": 34,
+      "outputId": 0,
+      "inputModuleId": 41,
+      "inputId": 5,
+      "color": "#0986ad"
+    },
+    {
+      "id": 199,
+      "outputModuleId": 38,
+      "outputId": 0,
+      "inputModuleId": 41,
+      "inputId": 2,
+      "color": "#c9b70e"
+    }
+  ]
+}
